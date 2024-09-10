@@ -1,0 +1,210 @@
+body{
+    background-image: linear-gradient(120deg, #b3bfce, #8ec5fc);
+    background-size: 300%;
+    animation: bg-animation 10s infinite alternate;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+@keyframes bg-animation {
+    0% {background-position: left;}
+    100%{background-size: right;}   
+}
+@keyframes breath {
+    0% {
+      transform: scale(0.8); 
+    }
+    50% {
+      transform: scale(1.0); 
+    }
+}
+h2, p{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+body > section.MainIntro > div{
+    animation: breath 2s ease-in-out ;
+
+}
+.name
+{
+    font-family: "Libre Bodoni", system-ui;
+    font-size: 30px;
+    position: relative;
+    color: #105aac;
+    letter-spacing: 1px;
+    
+}
+.name > h2{
+    font-size: 81px;
+}
+.meintro .container{
+    background-color: white;
+    width: 100%;
+    height: 1335px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+.overlay-image{
+    z-index: 0;
+    position: absolute;
+    top: 50%; /* Centers the image vertically */
+    left: 50%; /* Centers the image horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the image to be exactly centered */
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.right-part{
+    width: 27%;
+    height: 1335px;
+    background-color: #0a4280;
+}
+.my-info{
+    font-family: "antonia-variable",sans-serif;
+    font-size: 15px;
+    color: #105aac;
+    position: relative;
+    z-index: 2;
+    right: 30%;
+}
+.my-info > h2{
+    font-size: 105px;
+}
+.halfcircle{
+    width: 800px;
+    height: 800px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(0,-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.visual-info{
+    border-radius: 50%;
+}
+.left-circle{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #053162;
+    position: absolute;
+    right: 89%;
+}
+body > section.features > div{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a4280;
+    color: white;
+    gap: 50px;
+    text-align: center;
+}
+.feat{
+    margin: 15px;
+    flex-basis: 440px;
+}
+.feat > h2{
+    font-size: 30px;
+}
+.feat > p{
+    opacity: .7;
+}
+.footer{
+    margin-top: 0;
+    padding-top: 0;
+    height: 20vh;
+    background-color: #0a4280;
+    padding: 0 290px;
+}
+hr{
+    margin: 0;
+    opacity: .5;
+}
+.ending > .footer h3{
+    color: white;
+    opacity: .75;
+    margin-top: 16px;
+    font-size: 25px;
+}
+svg{
+    margin: 10px;
+    margin-top: 16px;
+}
+.footer > .left{
+    float:left
+}
+.marks{
+    float: right;
+}
+@media (max-width: 1280px){
+    .overlay-image{
+        width: 500px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .name > h2{
+        font-size: 40px;
+    }
+    .right-part {
+        width: 20vh; /* Fixed width of the parent */
+        height: 1335px; /* Full height */
+    }
+    .content{
+        overflow: hidden;
+    }
+    .halfcircle {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .visual-info{
+        height: 00px;
+        
+    }
+    .left-circle{
+        width: 0;
+        height: 0;
+    }
+    .my-info{
+        font-family: "antonia-variable",sans-serif;
+        font-size: 10px;
+        color: #105aac;
+        text-align: center;
+        right: -10%;
+    }
+    .my-info > h2{
+        font-size: 30px;
+    }
+    body > section.features > div{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .feat{
+        margin: 0;
+    }
+    .footer{
+        padding: 15px;
+    }
+    .footer > .left h3
+    {
+        font-size: 20px;
+    }
+}
