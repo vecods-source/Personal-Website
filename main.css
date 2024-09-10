@@ -49,7 +49,7 @@ body > section.MainIntro > div{
 .meintro .container{
     background-color: white;
     width: 100%;
-    height: 1335px;
+    height: 100vh;
     display: flex;
     justify-content: flex-end;
     position: relative;
@@ -153,9 +153,12 @@ svg{
 .marks{
     float: right;
 }
-@media (max-width: 1280px){
+@media (max-width: 1800px){
+    body{
+        overflow-x: hidden;
+    }
     .overlay-image{
-        width: 500px;
+        width: 350px;
     }
     .name{
         font-size: 15px;
@@ -165,7 +168,7 @@ svg{
     }
     .right-part {
         width: 20vh; /* Fixed width of the parent */
-        height: 1335px; /* Full height */
+        height: 100%; /* Full height */
     }
     .content{
         overflow: hidden;
@@ -195,16 +198,25 @@ svg{
     }
     body > section.features > div{
         flex-direction: column;
-        gap: 0px;
+        gap: 0;
     }
     .feat{
-        margin: 0;
+        margin: 0 40px 0 40px;
+        font-size: 10px;
+        flex-basis: 130px;
+    }
+    .feat > h2{
+        font-size: 18px;
     }
     .footer{
-        padding: 15px;
+        padding: 55px;
     }
     .footer > .left h3
     {
-        font-size: 20px;
+        font-size: 13px;
+    }
+    svg{
+        height: 20px;
+        margin: 15px 0 0 0;
     }
 }
